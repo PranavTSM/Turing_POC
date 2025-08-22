@@ -1,0 +1,27 @@
+# ===============================
+# Brand Tokens (typography, color)
+# ===============================
+[typography]
+family_primary = "Calibri"
+family_mono    = "Consolas"
+title_pt       = 32
+subtitle_pt    = 22
+body_pt        = 16
+caption_pt     = 12
+min_body_pt    = 12              # floor when shrinking manually
+
+[lineheights]
+title = 1.15
+body  = 1.20
+small = 1.10
+
+[spacing]
+padding_pt = 6
+
+[colors]
+text_primary   = "#222222"
+text_secondary = "#4B4B4B"
+accent         = "#005EB8"
+muted          = "#D9E7F6"
+table_header_bg= "#EEF5FD"
+table_row_alt  = "#FAFAFA"

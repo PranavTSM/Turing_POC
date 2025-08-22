@@ -1,71 +1,327 @@
 # ===============================
 # PPT Template Layout Definitions
+# (all units in inches)
 # ===============================
 
+# --- Simple cover / only heading
 [Only_Heading]
 [[Only_Heading.placeholders]]
 name = "title"
 type = "text"
 x = 1
-y = 1
+y = 1.2
 w = 8
 h = 2
 align = "center"
 valign = "middle"
+font_size = 32
+bold = true
 
-[1_Paragraph]
-[[1_Paragraph.placeholders]]
-name = "paragraph_1"
+# --- Section cover
+[Section_Cover]
+[[Section_Cover.placeholders]]
+name = "section_title"
 type = "text"
-x = 1
-y = 2
-w = 8
-h = 5
+x = 0.8
+y = 1.4
+w = 8.4
+h = 1.6
+align = "left"
+valign = "middle"
+font_size = 30
+bold = true
+
+[[Section_Cover.placeholders]]
+name = "section_subtitle"
+type = "text"
+x = 0.8
+y = 3.2
+w = 8.4
+h = 0.8
 align = "left"
 valign = "top"
+font_size = 18
+color = "#4B4B4B"
 
-[1_Image_1_Paragraph]
-[[1_Image_1_Paragraph.placeholders]]
-name = "image_1"
-type = "image"
-x = 0.5
-y = 1
-w = 4
-h = 3
-
-[[1_Image_1_Paragraph.placeholders]]
-name = "paragraph_1"
+# --- Commentary only
+[Commentary_Only]
+[[Commentary_Only.placeholders]]
+name = "title"
 type = "text"
-x = 5
-y = 1
-w = 4
-h = 3
+x = 0.7
+y = 0.7
+w = 8.6
+h = 0.8
+align = "left"
+valign = "middle"
+font_size = 24
+bold = true
+
+[[Commentary_Only.placeholders]]
+name = "commentary"
+type = "text"
+x = 0.7
+y = 1.7
+w = 8.6
+h = 4.8
 align = "left"
 valign = "top"
+font_size = 16
+line_spacing = 1.2
+shrink_to_min = true
 
-[2_Images_1_Paragraph]
-[[2_Images_1_Paragraph.placeholders]]
+# --- 1 image + 1 paragraph (two-column)
+[One_Image_One_Paragraph]
+[[One_Image_One_Paragraph.placeholders]]
 name = "image_1"
 type = "image"
-x = 0.5
-y = 1
-w = 4
-h = 3
+x = 0.6
+y = 1.2
+w = 4.5
+h = 3.2
+fit = "contain"     # contain | cover
 
-[[2_Images_1_Paragraph.placeholders]]
+[[One_Image_One_Paragraph.placeholders]]
+name = "paragraph_1"
+type = "text"
+x = 5.3
+y = 1.2
+w = 4
+h = 3.2
+align = "left"
+valign = "top"
+font_size = 16
+line_spacing = 1.2
+
+# --- 2 images + 1 paragraph (grid + caption band)
+[Two_Images_One_Paragraph]
+[[Two_Images_One_Paragraph.placeholders]]
+name = "image_1"
+type = "image"
+x = 0.6
+y = 1.2
+w = 4.2
+h = 3
+fit = "contain"
+
+[[Two_Images_One_Paragraph.placeholders]]
 name = "image_2"
 type = "image"
-x = 5
-y = 1
-w = 4
+x = 5.0
+y = 1.2
+w = 4.2
 h = 3
+fit = "contain"
 
-[[2_Images_1_Paragraph.placeholders]]
+[[Two_Images_One_Paragraph.placeholders]]
 name = "paragraph_1"
 type = "text"
-x = 1
+x = 0.9
 y = 4.5
-w = 8
-h = 2
+w = 8.3
+h = 1.6
 align = "center"
 valign = "top"
+font_size = 16
+
+# --- Charts grid (1→1x1, 2→1x2, 3→2x2 w/blank, 4→2x2, 5-6→2x3)
+# Use images for charts; place up to 6 chart slots
+[Charts_Grid]
+[[Charts_Grid.placeholders]]
+name = "title"
+type = "text"
+x = 0.7
+y = 0.6
+w = 8.6
+h = 0.7
+font_size = 20
+bold = true
+
+# Slots (we'll selectively fill based on provided images)
+# row1
+[[Charts_Grid.placeholders]]
+name = "chart_1"
+type = "image"
+x = 0.6
+y = 1.4
+w = 4.2
+h = 3
+fit = "contain"
+
+[[Charts_Grid.placeholders]]
+name = "chart_2"
+type = "image"
+x = 5.0
+y = 1.4
+w = 4.2
+h = 3
+fit = "contain"
+
+# row2
+[[Charts_Grid.placeholders]]
+name = "chart_3"
+type = "image"
+x = 0.6
+y = 4.7
+w = 4.2
+h = 3
+fit = "contain"
+
+[[Charts_Grid.placeholders]]
+name = "chart_4"
+type = "image"
+x = 5.0
+y = 4.7
+w = 4.2
+h = 3
+fit = "contain"
+
+# row3 (for 5-6)
+[[Charts_Grid.placeholders]]
+name = "chart_5"
+type = "image"
+x = 0.6
+y = 8.0
+w = 4.2
+h = 3
+fit = "contain"
+
+[[Charts_Grid.placeholders]]
+name = "chart_6"
+type = "image"
+x = 5.0
+y = 8.0
+w = 4.2
+h = 3
+fit = "contain"
+
+# --- Two-Column: Commentary + Charts (CG1)
+[Two_Col_Commentary_Charts]
+[[Two_Col_Commentary_Charts.placeholders]]
+name = "title"
+type = "text"
+x = 0.7
+y = 0.6
+w = 8.6
+h = 0.7
+font_size = 20
+bold = true
+
+[[Two_Col_Commentary_Charts.placeholders]]
+name = "commentary"
+type = "text"
+x = 0.7
+y = 1.5
+w = 3.6
+h = 6
+font_size = 16
+line_spacing = 1.2
+
+[[Two_Col_Commentary_Charts.placeholders]]
+name = "chart_1"
+type = "image"
+x = 4.6
+y = 1.5
+w = 4.7
+h = 3
+fit = "contain"
+
+[[Two_Col_Commentary_Charts.placeholders]]
+name = "chart_2"
+type = "image"
+x = 4.6
+y = 4.8
+w = 4.7
+h = 3
+fit = "contain"
+
+# --- Table Only (T1)
+[Table_Only]
+[[Table_Only.placeholders]]
+name = "title"
+type = "text"
+x = 0.7
+y = 0.6
+w = 8.6
+h = 0.7
+font_size = 20
+bold = true
+
+[[Table_Only.placeholders]]
+name = "table_1"
+type = "table"
+x = 0.7
+y = 1.6
+w = 8.6
+h = 6
+row_height = 0.3          # inches per row
+header = true
+zebra = true
+font_size = 14
+columns = [1.8, 1.4, 1.4, 1.4, 1.6]  # inches; sum <= w
+
+# --- Triad: Commentary + 1 Chart + 1 Table (CGT1)
+[Triad_CGT1]
+[[Triad_CGT1.placeholders]]
+name = "title"
+type = "text"
+x = 0.6
+y = 0.6
+w = 8.8
+h = 0.7
+font_size = 20
+bold = true
+
+[[Triad_CGT1.placeholders]]
+name = "commentary"
+type = "text"
+x = 0.6
+y = 1.5
+w = 3.4
+h = 6
+font_size = 16
+line_spacing = 1.2
+
+[[Triad_CGT1.placeholders]]
+name = "chart_1"
+type = "image"
+x = 4.2
+y = 1.5
+w = 5.2
+h = 2.9
+fit = "contain"
+
+[[Triad_CGT1.placeholders]]
+name = "table_1"
+type = "table"
+x = 4.2
+y = 4.7
+w = 5.2
+h = 2.8
+row_height = 0.28
+header = true
+zebra = true
+font_size = 12
+columns = [2.4, 1.4, 1.4]
+
+# --- Continuation (C1a) for commentary overflow
+[Commentary_Continuation]
+[[Commentary_Continuation.placeholders]]
+name = "title"
+type = "text"
+x = 0.7
+y = 0.6
+w = 8.6
+h = 0.7
+font_size = 20
+bold = true
+
+[[Commentary_Continuation.placeholders]]
+name = "commentary"
+type = "text"
+x = 0.7
+y = 1.6
+w = 8.6
+h = 6
+font_size = 16
+line_spacing = 1.2

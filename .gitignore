@@ -20,17 +20,7 @@ venv/
 # Dependencies & lock files
 uv.lock
 
-# Output / generated files
-*.pptx
-~$*.pptx
-output/
-output.pptx
 
-# Images / media generated during tests
-*.png
-*.jpg
-*.jpeg
-*.gif
 
 # Logs
 *.log
