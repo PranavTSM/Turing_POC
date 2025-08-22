@@ -1,0 +1,71 @@
+# ===============================
+# PPT Template Layout Definitions
+# ===============================
+
+[Only_Heading]
+[[Only_Heading.placeholders]]
+name = "title"
+type = "text"
+x = 1
+y = 1
+w = 8
+h = 2
+align = "center"
+valign = "middle"
+
+[1_Paragraph]
+[[1_Paragraph.placeholders]]
+name = "paragraph_1"
+type = "text"
+x = 1
+y = 2
+w = 8
+h = 5
+align = "left"
+valign = "top"
+
+[1_Image_1_Paragraph]
+[[1_Image_1_Paragraph.placeholders]]
+name = "image_1"
+type = "image"
+x = 0.5
+y = 1
+w = 4
+h = 3
+
+[[1_Image_1_Paragraph.placeholders]]
+name = "paragraph_1"
+type = "text"
+x = 5
+y = 1
+w = 4
+h = 3
+align = "left"
+valign = "top"
+
+[2_Images_1_Paragraph]
+[[2_Images_1_Paragraph.placeholders]]
+name = "image_1"
+type = "image"
+x = 0.5
+y = 1
+w = 4
+h = 3
+
+[[2_Images_1_Paragraph.placeholders]]
+name = "image_2"
+type = "image"
+x = 5
+y = 1
+w = 4
+h = 3
+
+[[2_Images_1_Paragraph.placeholders]]
+name = "paragraph_1"
+type = "text"
+x = 1
+y = 4.5
+w = 8
+h = 2
+align = "center"
+valign = "top"
